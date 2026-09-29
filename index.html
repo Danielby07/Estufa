@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulador de Estufa 3D</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="wrap">
+<section class="stage" id="stage">
+ <div class="stove" id="stove">
+  <div class="shadow"></div>
+  <div class="f back"></div><div class="f left"></div><div class="f right"></div>
+  <div class="f top" id="top"></div>
+  <div class="f front">
+   <div class="panel"><div id="knobs"></div>
+    <div class="lcd" id="lcd"><span id="l1"></span><span id="l2"></span></div>
+    <div class="pb"><button id="tmM" title="-1 min">−</button><button id="tmP" title="+1 min">+</button><button id="tmG" title="Iniciar/Pausar temporizador">⏱</button><button id="lt" title="Luz del horno">💡</button></div>
+   </div>
+   <div class="cav"><div class="rk" style="top:70px"></div><div class="rk" style="top:150px"></div><div class="rk" style="top:230px"></div></div>
+   <div class="door" id="door"><div class="win"></div><div class="handle" id="handle" title="Abrir/cerrar puerta"></div></div>
+  </div>
+ </div>
+ <div class="hint">Arrastra para girar · clic en perilla: subir · clic derecho o rueda: bajar · clic en un quemador: poner/quitar olla · teclas 1-4, O, L, P, T, A</div>
+</section>
+<aside class="side">
+ <h1>🔥 Estufa 3D</h1><div class="mu">Simulador con 4 quemadores a gas, horno, luz y temporizador.</div>
+ <div id="rows"></div>
+ <div class="row"><span>Horno</span><span id="ovs"></span></div>
+ <div class="tbox"><b>⏱ Temporizador</b><div class="tbig" id="tbig">00:00</div><div class="mu" id="tst">Detenido</div>
+  <div class="btns"><button id="s10">+10 s</button><button id="s1">+1 min</button><button id="s5">+5 min</button><button id="sm">−1 min</button><button id="sgo">▶ Iniciar</button><button id="srs">Reiniciar</button></div></div>
+ <div class="btns"><button id="bDoor">Puerta</button><button id="bOff">Apagar todo</button><button id="bMute">🔊 Sonido</button>
+ <button data-v="f">Vista frontal</button><button data-v="t">Vista superior</button><button data-v="q">Vista 3/4</button><button id="bTest">▶ Autotest</button></div>
+ <pre id="log">Pulsa «Autotest» para verificar funciones y compatibilidad del navegador.</pre>
+</aside>
+</div>
+<script src="script.js"></script></body></html>
